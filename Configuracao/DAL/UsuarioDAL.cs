@@ -14,6 +14,17 @@ namespace DAL
 
         }
 
+
+        public void Atualizar(Usuario _usuario)
+        {
+
+        }
+
+        public void Deletar(int _id)
+        {
+
+        }
+
         public List<Usuario> BuscarTodos()
         {
             throw new NotImplementedException();
@@ -27,15 +38,6 @@ namespace DAL
         public List<Usuario> BuscarporId(int _id)
         {
             throw new NotImplementedException();
-        }
-
-        public void Atualizar(Usuario _usuario)
-        {
-
-        }
-        public void Deletar(Usuario _usuario)
-        {
-
         }
     }
 }
