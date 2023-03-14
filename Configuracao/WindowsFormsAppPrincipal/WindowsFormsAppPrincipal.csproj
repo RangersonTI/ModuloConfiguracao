@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{483D7216-6B64-45D4-BF1B-14054057957D}</ProjectGuid>
+    <ProjectGuid>{7EBA0E3E-66DD-4F72-A554-C70AA9399132}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsAppPrincipal</RootNamespace>
     <AssemblyName>WindowsFormsAppPrincipal</AssemblyName>
@@ -77,10 +77,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{8ab31e50-daf9-490a-8d9d-26a8717b9dbc}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{9d5550c5-b7b7-410d-adbd-30e015856a21}</Project>
       <Name>Models</Name>
