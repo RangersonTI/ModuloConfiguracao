@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -12,7 +13,7 @@ namespace DAL
     {
         public void Inserir(GrupoUsuario _gpusuario)
         {
-
+            
         }
 
 
