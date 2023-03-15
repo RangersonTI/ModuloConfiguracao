@@ -30,7 +30,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public List<Permissao> BuscarporDescrcao(string _nome)
+        public List<Permissao> BuscarporDescricao(string _descricao)
         {
             throw new NotImplementedException();
         }

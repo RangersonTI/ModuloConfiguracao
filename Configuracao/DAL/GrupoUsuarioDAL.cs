@@ -4,18 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Models;
 
 namespace DAL
 {
     public class GrupoUsuarioDAL
     {
-        public void Inserir(GrupoUsuarioDAL _gpusuario)
+        public void Inserir(GrupoUsuario _gpusuario)
         {
 
         }
 
 
-        public void Alterar(GrupoUsuarioDAL _gpusuario)
+        public void Alterar(GrupoUsuario _gpusuario)
         {
 
         }
@@ -25,17 +26,17 @@ namespace DAL
 
         }
 
-        public List<GrupoUsuarioDAL> BuscarTodos()
+        public List<GrupoUsuario> BuscarTodos()
         {
             throw new NotImplementedException();
         }
 
-        public List<GrupoUsuarioDAL> BuscarporNome(string _nome)
+        public List<GrupoUsuario> BuscarporNome(string _nome)
         {
             throw new NotImplementedException();
         }
 
-        public List<GrupoUsuarioDAL> BuscarporId(int _id)
+        public List<GrupoUsuario> BuscarporId(int _id)
         {
             throw new NotImplementedException();
         }
