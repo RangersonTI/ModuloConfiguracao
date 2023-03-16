@@ -106,7 +106,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Nome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario";
+                cmd.CommandText = "SELECT ID_usuario,Nome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario";
                 cmd.CommandType= System.Data.CommandType.Text;
                 cn.Open();
 
@@ -142,9 +142,88 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT ID_usuarioNome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario WHERE Nome = @nome";
+                cmd.CommandText = "SELECT ID_usuario,Nome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario WHERE Nome = @nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@nome", _nome);
+                cn.Open();
+
+                using (SqlDataReader ler = cmd.ExecuteReader())
+                {
+                    while (ler.Read())
+                    {
+                        usuario.Id = Convert.ToInt32(ler["Id"]);
+                        usuario.Nome = (ler["Nome"]).ToString();
+                        usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
+                        usuario.Email = (ler["Email"]).ToString();
+                        usuario.CPF = (ler["CPF"]).ToString();
+                        usuario.Senha = (ler["Senha"]).ToString();
+                        usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuarios.Add(usuario);
+                    }
+                }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro na tentativa de buscar os dados. Por favor verifique sua conexão", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Usuario> BuscarPorCPF(string _cpf)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            List<Usuario> usuarios = new List<Usuario>();
+            Usuario usuario = new Usuario();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT ID_usuario,Nome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario WHERE CPF LIKE=@CPF";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@CPF", _cpf);
+                cn.Open();
+
+                using (SqlDataReader ler = cmd.ExecuteReader())
+                {
+                    while (ler.Read())
+                    {
+                        usuario.Id = Convert.ToInt32(ler["Id"]);
+                        usuario.Nome = (ler["Nome"]).ToString();
+                        usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
+                        usuario.Email = (ler["Email"]).ToString();
+                        usuario.CPF = (ler["CPF"]).ToString();
+                        usuario.Senha = (ler["Senha"]).ToString();
+                        usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuarios.Add(usuario);
+                    }
+                }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro na tentativa de buscar os dados. Por favor verifique sua conexão", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Usuario> BuscarporNomeUsuario(string _nomeusuario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            List<Usuario> usuarios = new List<Usuario>();
+            Usuario usuario = new Usuario();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID_usuarioNome,Nome_de_usuario,Email,CPF,Senha
+                                   Ativo FROM Usuario WHERE Nome LIKE=@nmUsuario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@nmUsuario", _nomeusuario);
                 cn.Open();
 
                 using (SqlDataReader ler = cmd.ExecuteReader())

@@ -37,7 +37,7 @@ namespace DAL
         }
 
 
-        public void Altualizar(GrupoUsuario _gpusuario)
+        public void Atualizar(GrupoUsuario _gpusuario)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try

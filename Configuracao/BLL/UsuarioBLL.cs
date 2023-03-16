@@ -27,6 +27,32 @@ namespace BLL
             usuarioDAL.Atualizar(_usuario);
 
         }
+        public void Excluir(int _id)
+        {
+            new UsuarioDAL().Deletar(_id);
+        }
+
+        public List<Usuario> BuscarPorTodos()
+        {
+            return new UsuarioDAL().BuscarTodos();
+        }
+        public List<Usuario>BuscarPorNome(string _nome)
+        {
+            return new UsuarioDAL().BuscarporNome(_nome);
+        }
+        public List<Usuario>BuscarPorID(int _id)
+        {
+            return new UsuarioDAL().BuscarporId(_id);
+        }
+        public List<Usuario>BuscarPorCPF(string _Cpf)
+        {
+            return new UsuarioDAL().BuscarPorCPF(_Cpf);
+        }
+        public List<Usuario> BuscarPorNMUsuario(string _nmusuario)
+        {
+            return new UsuarioDAL().BuscarporNomeUsuario(_nmusuario);
+        }
+
         private void ValidarDados(Usuario _usuario)
         {
             if(_usuario.Senha.Length <= 4)

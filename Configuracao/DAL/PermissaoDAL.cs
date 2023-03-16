@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class PermissaoDAL
+    public class PermissaoDAL
     {
         public void Inserir(Permissao _permissao)
         {
