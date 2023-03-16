@@ -98,7 +98,7 @@ namespace DAL
             }
         }
 
-        public Usuario BuscarTodos()
+        public List<Usuario> BuscarTodos()
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             List<Usuario> usuarios = new List<Usuario>();
@@ -126,7 +126,7 @@ namespace DAL
 
                     }
                 }
-              return usuario;
+              return usuarios;
             }
             catch(Exception ex)
             {
@@ -175,7 +175,7 @@ namespace DAL
             }
         }
 
-        public Usuario BuscarporId(int _id)
+        public List<Usuario> BuscarporId(int _id)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             List<Usuario> usuarios = new List<Usuario>();
@@ -204,7 +204,7 @@ namespace DAL
                         usuarios.Add(usuario);
                     }
                 }
-                return usuario;
+                return usuarios;
             }
             catch (Exception ex)
             {
