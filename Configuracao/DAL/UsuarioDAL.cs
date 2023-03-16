@@ -42,7 +42,6 @@ namespace DAL
         
         }
 
-
         public void Atualizar(Usuario _usuario)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -152,7 +151,6 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
-                        usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();
                         usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
