@@ -8,24 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using Models;
 
 namespace WindowsFormsPrincipal
 {
-    public partial class FormGestaoUsuario : Form
+    public partial class FormBuscarUsuario : Form
     {
-        public FormGestaoUsuario()
+        public FormBuscarUsuario()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+            
         }
 
         private void FormGestaoUsuario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
         }
     }
 }

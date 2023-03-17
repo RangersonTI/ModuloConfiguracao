@@ -131,6 +131,10 @@ namespace DAL
             {
                 throw new Exception("Ocorreu um erro na tentativa de buscar os dados. Por favor verifique sua conexão", ex);
             }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public List<Usuario> BuscarporNome(string _nome)
