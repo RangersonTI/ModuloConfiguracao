@@ -16,6 +16,7 @@ namespace DAL
                          Initial Catalog=Configuracao;
                          Data Source= .\SQLEXPRESS2019A;
                          Password=Senailab02";
-        }    }
+            }
+        }    
     }
 }

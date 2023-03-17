@@ -190,6 +190,7 @@
             this.buttonDeletarUsuario.TabIndex = 4;
             this.buttonDeletarUsuario.Text = "Deletar";
             this.buttonDeletarUsuario.UseVisualStyleBackColor = true;
+            this.buttonDeletarUsuario.Click += new System.EventHandler(this.buttonDeletarUsuario_Click);
             // 
             // buttonAdicionar
             // 

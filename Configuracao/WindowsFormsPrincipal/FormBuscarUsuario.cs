@@ -29,5 +29,23 @@ namespace WindowsFormsPrincipal
         {
             usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
         }
+
+        private void buttonDeletarUsuario_Click(object sender, EventArgs e)
+        {
+            if (usuarioBindingSource.Count <= 0)
+            {
+                MessageBox.Show(" Não existe registro para ser excluído");
+                return;
+            }
+
+            if (MessageBox.Show(" Deseja excluir este resistro?",
+                "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
+
+            int id = ((Usuario)usuarioBindingSource.Current).Id;
+            new UsuarioBLL().Excluir(id);
+            usuarioBindingSource.RemoveCurrent();
+            MessageBox.Show("Registro excluido com sucesso");
+        }
     }
 }
