@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace WindowsFormsPrincipal
 {
@@ -18,6 +19,11 @@ namespace WindowsFormsPrincipal
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+        }
+
+        private void FormGestaoUsuario_Load(object sender, EventArgs e)
         {
 
         }
