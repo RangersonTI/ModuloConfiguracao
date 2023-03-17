@@ -36,7 +36,6 @@ namespace DAL
             }
         }
 
-
         public void Atualizar(GrupoUsuario _gpusuario)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -95,7 +94,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT IDGrupo,NomeGrupo FROM Permissão";
+                cmd.CommandText = "SELECT IDGrupo,NomeGrupo FROM Grupo_Usuario";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -130,7 +129,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT IDGrupo,NomeGrupo FROM Permissão WHERE NomeGrupo LIKE =@nome";
+                cmd.CommandText = "SELECT IDGrupo,NomeGrupo FROM Grupo_Usuario WHERE NomeGrupo LIKE =@nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@nome", _nome);
                 cn.Open();
@@ -139,7 +138,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
-                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id_grupo"]);
+                        grupousuario.Id_grupo = Convert.ToInt32(ler["IDgrupo"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
                         gpusuario.Add(grupousuario);
                     }
@@ -165,16 +164,16 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT IDgrupo,NomeGrupo FROM Permissão WHERE IDgrupo=@id";
+                cmd.CommandText = "SELECT IDgrupo,NomeGrupo FROM Grupo_Usuario WHERE IDgrupo=@id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@nome", _id);
+                cmd.Parameters.AddWithValue("@id", _id);
                 cn.Open();
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
                     while (ler.Read())
                     {
-                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id_grupo"]);
+                        grupousuario.Id_grupo = Convert.ToInt32(ler["IDgrupo"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
                         gpusuario.Add(grupousuario);
                     }

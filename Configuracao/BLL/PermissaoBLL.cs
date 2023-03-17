@@ -25,7 +25,18 @@ namespace BLL
         {
             permissaoDAL.Deletar(_id);
         }
-
+        public List<Permissao> BuscarTudo()
+        {
+            return new PermissaoDAL().BuscarTodos();
+        }
+        public List<Permissao> BuscarPorDescricao(string _desc)
+        {
+            return new PermissaoDAL().BuscarporDescricao(_desc);
+        }
+        public List<Permissao> BuscarPorId(int _id)
+        {
+            return new PermissaoDAL().BuscarporId(_id);
+        }
         private void ValidarDados(Permissao _permissao)
         {
             if (_permissao.Descricao.Length > 250)

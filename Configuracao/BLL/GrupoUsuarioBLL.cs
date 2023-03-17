@@ -25,7 +25,18 @@ namespace BLL
         {
             GPUsuarioDAL.Deletar(_id);
         }
-
+        public List<GrupoUsuario> BuscarTudo()
+        {
+            return new GrupoUsuarioDAL().BuscarTodos();
+        }
+        public List<GrupoUsuario>BuscarporNomeGrupo(string _nome)
+        {
+            return new GrupoUsuarioDAL().BuscarporNome(_nome);
+        }
+        public List<GrupoUsuario>BuscarporID(int _id)
+        {
+            return new GrupoUsuarioDAL().BuscarporId(_id);
+        }
         private void ValidarDados(GrupoUsuario _gpUsuario)
         {
             if (_gpUsuario.NomeGrupo.Length > 150)

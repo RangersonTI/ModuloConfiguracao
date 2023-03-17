@@ -181,7 +181,8 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT ID_usuario,Nome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario WHERE CPF LIKE=@CPF";
+                cmd.CommandText = @"SELECT ID_usuario,Nome,Nome_de_usuario,Email,CPF,Senha,
+                                  Ativo FROM Usuario WHERE CPF LIKE=@CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _cpf);
                 cn.Open();
