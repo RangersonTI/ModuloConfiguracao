@@ -52,6 +52,18 @@
     <Compile Include="FormBuscarUsuario.Designer.cs">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastrarGPUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarGPUsuario.Designer.cs">
+      <DependentUpon>FormCadastrarGPUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInserirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInserirUsuario.Designer.cs">
+      <DependentUpon>FormInserirUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInserirUsuario.resx">
+      <DependentUpon>FormInserirUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
