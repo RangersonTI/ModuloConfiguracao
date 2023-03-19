@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsPrincipal
+namespace WindowsFormsAppPrincipal
 {
-    public partial class FormCadastrarGPUsuario : Form
+    public partial class FormCadastroUsuario : Form
     {
-        public FormCadastrarGPUsuario()
+        public FormCadastroUsuario()
         {
             InitializeComponent();
         }

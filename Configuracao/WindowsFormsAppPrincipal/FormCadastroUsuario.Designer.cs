@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsPrincipal
+﻿namespace WindowsFormsAppPrincipal
 {
-    partial class FormInserirUsuario
+    partial class FormCadastroUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -51,11 +51,11 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(211, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 39);
+            this.label1.Size = new System.Drawing.Size(398, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // textBoxNome
             // 
@@ -69,12 +69,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 128);
+            this.label2.Location = new System.Drawing.Point(21, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // label4
             // 
@@ -82,10 +82,10 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(201, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(82, 29);
             this.label4.TabIndex = 4;
             this.label4.Text = "E-mail";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+
             // 
             // label5
             // 
@@ -93,10 +93,10 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(490, 207);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 25);
+            this.label5.Size = new System.Drawing.Size(82, 29);
             this.label5.TabIndex = 5;
             this.label5.Text = "Senha";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+
             // 
             // label6
             // 
@@ -104,7 +104,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(328, 128);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 25);
+            this.label6.Size = new System.Drawing.Size(198, 29);
             this.label6.TabIndex = 6;
             this.label6.Text = "Nome de usuário";
             // 
@@ -114,7 +114,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(21, 207);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 25);
+            this.label7.Size = new System.Drawing.Size(61, 29);
             this.label7.TabIndex = 7;
             this.label7.Text = "CPF";
             // 
@@ -124,7 +124,7 @@
             this.checkBoxUsuAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxUsuAtivo.Location = new System.Drawing.Point(649, 149);
             this.checkBoxUsuAtivo.Name = "checkBoxUsuAtivo";
-            this.checkBoxUsuAtivo.Size = new System.Drawing.Size(91, 29);
+            this.checkBoxUsuAtivo.Size = new System.Drawing.Size(96, 33);
             this.checkBoxUsuAtivo.TabIndex = 8;
             this.checkBoxUsuAtivo.Text = "Ativo?";
             this.checkBoxUsuAtivo.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             this.textBoxSenha.TabIndex = 11;
             // 
             // textBoxNmUsuario
-            // 
+            //
             this.textBoxNmUsuario.Location = new System.Drawing.Point(327, 156);
             this.textBoxNmUsuario.Multiline = true;
             this.textBoxNmUsuario.Name = "textBoxNmUsuario";
@@ -163,22 +163,22 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(566, 420);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(566, 417);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 30);
+            this.button1.Size = new System.Drawing.Size(96, 33);
             this.button1.TabIndex = 14;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(247)))));
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(673, 420);
+            this.button2.Location = new System.Drawing.Point(676, 417);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 30);
+            this.button2.Size = new System.Drawing.Size(96, 33);
             this.button2.TabIndex = 15;
             this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = false;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormInserirUsuario";
             this.Text = "Cadastro de Usuário";
-            this.Load += new System.EventHandler(this.FormInserirUsuario_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
