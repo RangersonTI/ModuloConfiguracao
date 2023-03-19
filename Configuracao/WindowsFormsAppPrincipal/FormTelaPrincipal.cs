@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
+using BLL;
 
 namespace WindowsFormsAppPrincipal
 {
@@ -15,7 +16,6 @@ namespace WindowsFormsAppPrincipal
     {
         public FormTelaPrincipal()
         {
-            InitializeComponent();
             Usuario usuario = new Usuario();
             usuario.Nome = "Junior Falcão";
             usuario.NomeUsuario = "JuninhoBR";
@@ -23,6 +23,8 @@ namespace WindowsFormsAppPrincipal
             usuario.CPF = "524.640.328-91";
             usuario.Email = "jumentocg@gmail.com";
             usuario.Ativo = true;
+            new UsuarioBLL().Inserir(usuario);
+            InitializeComponent();
         }
 
         private void FormTelaPrincipal_Load(object sender, EventArgs e)
@@ -35,7 +37,6 @@ namespace WindowsFormsAppPrincipal
             using (FormBuscarUsuario frm = new FormBuscarUsuario())
             {
                 frm.ShowDialog();
-                
             }
         }
     }

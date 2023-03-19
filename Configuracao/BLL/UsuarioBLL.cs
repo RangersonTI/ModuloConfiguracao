@@ -11,19 +11,17 @@ namespace BLL
 {
     public class UsuarioBLL
     {
-        UsuarioDAL usuarioDAL = new UsuarioDAL();
+        
         public void Inserir(Usuario _usuario)
         {
-            if(_usuario.Senha.Length <= 4)
-            {
-                throw new Exception("A senha deve ter mais de 4 caracters");
-            }
-            
+            ValidarDados(_usuario);
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Inserir(_usuario);
         }
         public void Alterar(Usuario _usuario)
         {
             ValidarDados(_usuario);
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Atualizar(_usuario);
 
         }

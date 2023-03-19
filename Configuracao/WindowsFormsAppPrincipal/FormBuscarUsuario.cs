@@ -50,5 +50,10 @@ namespace WindowsFormsAppPrincipal
                 frm.ShowDialog();
             }
         }
+
+        private void FormBuscarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

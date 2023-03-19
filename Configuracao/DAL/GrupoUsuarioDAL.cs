@@ -17,7 +17,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Grupo_Usuario(NomeGurpo)VALUE(@gpnome)";
+                cmd.CommandText = @"INSERT INTO GrupoUsuario(NomeGurpo)VALUE(@gpnome)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@gpnome", _gpusuario.NomeGrupo);
@@ -42,7 +42,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Grupo_Usuario SET NomeGrupo=@nomegp WHERE IDGrupo=@id";
+                cmd.CommandText = @"UPDATE GrupoUsuario SET NomeGrupo=@nomegp WHERE Id=@id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", _gpusuario.Id_grupo);
                 cmd.Parameters.AddWithValue("@nomegp", _gpusuario.NomeGrupo);
@@ -67,7 +67,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM Grupo_Usuario WHERE IDGrupo=@id";
+                cmd.CommandText = @"DELETE FROM GrupoUsuario WHERE Id=@id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", _id);
 
@@ -94,7 +94,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT IDGrupo,NomeGrupo FROM Grupo_Usuario";
+                cmd.CommandText = "SELECT Id,NomeGrupo FROM GrupoUsuario";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -103,7 +103,7 @@ namespace DAL
                     if (ler.Read())
                     {
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
-                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id_grupo"]);
+                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
                         gpusuario.Add(grupousuario);
 
                     }
@@ -129,7 +129,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT IDGrupo,NomeGrupo FROM Grupo_Usuario WHERE NomeGrupo LIKE =@nome";
+                cmd.CommandText = "SELECT Id,NomeGrupo FROM GrupoUsuario WHERE NomeGrupo LIKE =@nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@nome", _nome);
                 cn.Open();
@@ -138,7 +138,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
-                        grupousuario.Id_grupo = Convert.ToInt32(ler["IDgrupo"]);
+                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
                         gpusuario.Add(grupousuario);
                     }
@@ -164,7 +164,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT IDgrupo,NomeGrupo FROM Grupo_Usuario WHERE IDgrupo=@id";
+                cmd.CommandText = "SELECT Id,NomeGrupo FROM GrupoUsuario WHERE Id=@id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", _id);
                 cn.Open();
@@ -173,7 +173,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
-                        grupousuario.Id_grupo = Convert.ToInt32(ler["IDgrupo"]);
+                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
                         gpusuario.Add(grupousuario);
                     }
