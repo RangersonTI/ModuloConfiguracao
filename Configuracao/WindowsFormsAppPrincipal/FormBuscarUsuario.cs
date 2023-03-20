@@ -14,6 +14,7 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class FormBuscarUsuario : Form
     {
+        public int Id;
         public FormBuscarUsuario()
         {
             InitializeComponent();
@@ -49,11 +50,27 @@ namespace WindowsFormsAppPrincipal
             {
                 frm.ShowDialog();
             }
+           buttonBuscar_Click(null,null);
         }
 
         private void FormBuscarUsuario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void usuarioBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            int id = ((Usuario)usuarioBindingSource.Current).Id;
+            using (FormCadastroUsuario frm = new FormCadastroUsuario(id))
+            {
+                frm.ShowDialog();
+            }
+            buttonBuscar_Click(null, null);
         }
     }
 }

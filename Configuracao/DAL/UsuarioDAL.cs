@@ -112,7 +112,7 @@ namespace DAL
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
                     while (ler.Read())
-                    {
+                    {   usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();
                         usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
@@ -154,6 +154,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
+                        usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();
                         usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
@@ -194,6 +195,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
+                        usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();
                         usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
@@ -234,6 +236,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
+                        usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();
                         usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
@@ -274,6 +277,7 @@ namespace DAL
                 {
                     while (ler.Read())
                     {
+
                         usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();

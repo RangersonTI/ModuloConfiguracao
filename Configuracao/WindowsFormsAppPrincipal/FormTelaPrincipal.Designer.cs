@@ -43,7 +43,7 @@
             this.cadastroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,26 +57,26 @@
             this.cadastroToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cadastroToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // permissãoToolStripMenuItem
             // 
             this.permissãoToolStripMenuItem.Name = "permissãoToolStripMenuItem";
-            this.permissãoToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.permissãoToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.permissãoToolStripMenuItem.Text = "Permissão";
             // 
             // grupoDeUsuárioToolStripMenuItem
             // 
             this.grupoDeUsuárioToolStripMenuItem.Name = "grupoDeUsuárioToolStripMenuItem";
-            this.grupoDeUsuárioToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.grupoDeUsuárioToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.grupoDeUsuárioToolStripMenuItem.Text = "Grupo de Usuário";
             // 
             // FormTelaPrincipal

@@ -67,4 +67,4 @@ FOREIGN KEY (IdGrupoUsuario) REFERENCES GrupoUsuario(Id)
 
 GO
 select * from Usuario;
-INSERT INTO Usuario (Nome,NomeUsuario,Email,Senha,CPF,Ativo) VALUES('Jumento','JMlist','jmLst@outlook.com','Labigo123','621.354.918-63',1);
+-- INSERT INTO Usuario (Nome,NomeUsuario,Email,Senha,CPF,Ativo)VALUES('Jumento','JMlist','jmLst@outlook.com','Labigo123','621.354.918-63',1);
