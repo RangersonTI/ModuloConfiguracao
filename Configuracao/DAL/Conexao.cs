@@ -14,8 +14,8 @@ namespace DAL
             {
                 return @"User ID=SA;
                          Initial Catalog=Configuracao;
-                         Data Source= .\SQLEXPRESS2019A;
-                         Password=Senailab02";
+                         Data Source= .\SQLEXPRESS; 
+                         Password=wrede"; //2019A Senailab02
             }
         }    
     }

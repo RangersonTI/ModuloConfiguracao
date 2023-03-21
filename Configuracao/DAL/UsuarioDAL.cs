@@ -47,7 +47,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Usuario SET Nome=@Nome, NomeUsuario=@NomeUsuario, Email=@Email, CPF=@CPF
+                cmd.CommandText = @"UPDATE Usuario SET Nome=@Nome, NomeUsuario=@NomeUsuario, Email=@Email, CPF=@CPF,
                                     Senha=@Senha, Ativo = @Ativo WHERE Id=@id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", _usuario.Nome);
@@ -268,7 +268,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id,Nome,Nome_de_usuario,Email,CPF,Senha,Ativo FROM Usuario WHERE ID_usuario = @id";
+                cmd.CommandText = "SELECT Id,Nome,NomeUsuario,Email,CPF,Senha,Ativo FROM Usuario WHERE Id= @id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", _id);
                 cn.Open();

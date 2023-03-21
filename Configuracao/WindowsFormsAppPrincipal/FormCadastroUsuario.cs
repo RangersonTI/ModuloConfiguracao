@@ -23,7 +23,7 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja cancelar a cancelar?",
+            if (MessageBox.Show("Deseja cancelar a operação?",
                 "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Close();
@@ -42,13 +42,25 @@ namespace WindowsFormsAppPrincipal
             {
                 usuarioBLL.Alterar((Usuario)usuarioBindingSource.Current);
             }
+            usuarioBLL.Inserir((Usuario)usuarioBindingSource.Current);
             MessageBox.Show("Registro regitrado com sucesso");
             Close();
         }
 
         private void FormCadastroUsuario_Load(object sender, EventArgs e)
         {
-            usuarioBindingSource.AddNew();
+            //UsuarioBLL usuarioBLL = new UsuarioBLL();
+            if (Id == 0)
+            {
+                usuarioBindingSource.AddNew();
+            }
+            else
+            {
+                usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorID(Id);
+
+            }
+            
+            
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

@@ -16,14 +16,6 @@ namespace WindowsFormsAppPrincipal
     {
         public FormTelaPrincipal()
         {
-            Usuario usuario = new Usuario();
-            usuario.Nome = "Junior Falcão";
-            usuario.NomeUsuario = "JuninhoBR";
-            usuario.Senha = "LabigoDomato45";
-            usuario.CPF = "524.640.328-91";
-            usuario.Email = "jumentocg@gmail.com";
-            usuario.Ativo = true;
-            new UsuarioBLL().Inserir(usuario);
             InitializeComponent();
         }
 
@@ -35,6 +27,14 @@ namespace WindowsFormsAppPrincipal
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormBuscarUsuario frm = new FormBuscarUsuario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void grupoDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarGrupoUsuario frm = new FormBuscarGrupoUsuario())
             {
                 frm.ShowDialog();
             }
