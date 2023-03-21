@@ -195,6 +195,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 115;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -223,7 +224,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBuscarGrupoUsuario";
-            this.Text = "BuscarGrupoUsuario";
+            this.Text = "Grupo de Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource1)).EndInit();

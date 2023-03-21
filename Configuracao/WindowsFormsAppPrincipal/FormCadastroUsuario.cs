@@ -42,7 +42,6 @@ namespace WindowsFormsAppPrincipal
             {
                 usuarioBLL.Alterar((Usuario)usuarioBindingSource.Current);
             }
-            usuarioBLL.Inserir((Usuario)usuarioBindingSource.Current);
             MessageBox.Show("Registro regitrado com sucesso");
             Close();
         }
@@ -64,6 +63,11 @@ namespace WindowsFormsAppPrincipal
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

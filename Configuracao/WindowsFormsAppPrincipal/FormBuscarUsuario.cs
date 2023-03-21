@@ -22,7 +22,14 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+            try
+            {
+                usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonExcluirUsuario_Click(object sender, EventArgs e)
@@ -65,7 +72,6 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            
             if (usuarioBindingSource.Count<=0)
             {
                 MessageBox.Show("Selecione uma opção para alterar.");
@@ -80,7 +86,6 @@ namespace WindowsFormsAppPrincipal
                 }
                 buttonBuscar_Click(null, null);
             }
-            
         }
     }
 }
