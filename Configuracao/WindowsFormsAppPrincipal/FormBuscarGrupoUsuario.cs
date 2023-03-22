@@ -21,7 +21,15 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            grupoUsuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+            try
+            {
+                grupoUsuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void buttonExcluirGpUsuario_Click(object sender, EventArgs e)
@@ -37,6 +45,14 @@ namespace WindowsFormsAppPrincipal
             int id = ((GrupoUsuario)grupoUsuarioBindingSource.Current).Id_grupo;
             new UsuarioBLL().Excluir(id);
             MessageBox.Show("Registro excluído com sucesso");
+        }
+
+        private void buttonAdicionarGpUsuario_Click(object sender, EventArgs e)
+        {
+            using(FormCadastroGrupoUsuario frm = new FormCadastroGrupoUsuario())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

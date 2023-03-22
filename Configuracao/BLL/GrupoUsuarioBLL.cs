@@ -10,19 +10,22 @@ namespace BLL
 {
     public class GrupoUsuarioBLL
     {
-        GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
         public void Inserir(GrupoUsuario _gpUsuario)
         {
-            ValidarDados(_gpUsuario);
+            GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
+            //ValidarDados(_gpUsuario);
             GPUsuarioDAL.Inserir(_gpUsuario);
         }
         public void Altualizar(GrupoUsuario _gpUsuario)
         {
+            GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
             ValidarDados(_gpUsuario);
             GPUsuarioDAL.Atualizar(_gpUsuario);
         }
-        public void Excluir(int _id)
+        public void Excluir(GrupoUsuario _gpUsuario, int _id)
         {
+            GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
+            ValidarDados(_gpUsuario);
             GPUsuarioDAL.Deletar(_id);
         }
         public List<GrupoUsuario> BuscarTudo()

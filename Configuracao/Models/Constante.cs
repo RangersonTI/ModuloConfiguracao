@@ -8,5 +8,6 @@ namespace Models
 {
     public static class Constante
     {
-        public static int IdUsuarioLogado;    }
+        public static int IdUsuarioLogado;   
+    }
 }

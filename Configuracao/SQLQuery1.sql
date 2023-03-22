@@ -14,6 +14,8 @@ INSERT INTO Permissao(Id, Descricao)VALUES(8,'Excluir grupo de usuário')
 INSERT INTO Permissao(Id, Descricao)VALUES(9,'Adicionar permissão a um grupo de usuário')
 INSERT INTO Permissao(Id, Descricao)VALUES(10,'Adicionar grupo de usuário a um usuário')
 
+--UPDATE Permissao SET Descricao = 'Cadastrar usuário' WHERE Id = 2;
+
 SELECT * FROM GrupoUsuario
 INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Vendedor')
 INSERT INTO GrupoUsuario(NomeGrupo)VALUES('Gerente')

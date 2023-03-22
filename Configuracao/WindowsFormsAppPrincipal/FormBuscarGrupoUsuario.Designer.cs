@@ -140,6 +140,7 @@
             this.buttonAdicionarGpUsuario.TabIndex = 13;
             this.buttonAdicionarGpUsuario.Text = "Adicionar";
             this.buttonAdicionarGpUsuario.UseVisualStyleBackColor = true;
+            this.buttonAdicionarGpUsuario.Click += new System.EventHandler(this.buttonAdicionarGpUsuario_Click);
             // 
             // buttonAdicionarPermissao
             // 
