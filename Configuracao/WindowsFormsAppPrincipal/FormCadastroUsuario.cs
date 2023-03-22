@@ -48,7 +48,6 @@ namespace WindowsFormsAppPrincipal
 
         private void FormCadastroUsuario_Load(object sender, EventArgs e)
         {
-            //UsuarioBLL usuarioBLL = new UsuarioBLL();
             if (Id == 0)
             {
                 usuarioBindingSource.AddNew();
@@ -56,10 +55,7 @@ namespace WindowsFormsAppPrincipal
             else
             {
                 usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorID(Id);
-
             }
-            
-            
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

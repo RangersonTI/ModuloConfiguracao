@@ -14,6 +14,7 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class FormBuscarGrupoUsuario : Form
     {
+        int Id;
         public FormBuscarGrupoUsuario()
         {
             InitializeComponent();
@@ -21,9 +22,10 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
+            grupoUsuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
             try
             {
-                grupoUsuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+                
             }
             catch(Exception ex)
             {
@@ -43,7 +45,7 @@ namespace WindowsFormsAppPrincipal
                 "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
             int id = ((GrupoUsuario)grupoUsuarioBindingSource.Current).Id_grupo;
-            new UsuarioBLL().Excluir(id);
+            new GrupoUsuarioBLL().Excluir(id);
             MessageBox.Show("Registro excluído com sucesso");
         }
 
@@ -53,6 +55,11 @@ namespace WindowsFormsAppPrincipal
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void FormBuscarGrupoUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

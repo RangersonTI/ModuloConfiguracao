@@ -17,7 +17,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO GrupoUsuario(NomeGurpo)VALUE(@gpnome)";
+                cmd.CommandText = @"INSERT INTO GrupoUsuario(NomeGrupo)VALUES(@gpnome)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@gpnome", _gpusuario.NomeGrupo);
@@ -183,6 +183,43 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro na tentativa de buscar os dados. Por favor verifique sua conexão", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<GrupoUsuario>BuscarporIdUsuario(int _idUsuario)
+        {
+            List<GrupoUsuario> grupoUsuarios = new List<GrupoUsuario>();
+            GrupoUsuario grupousuario;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT GrupoUsuario.Id, GrupoUsuario.NomeGrupo FROM GrupoUsuario
+                INNER JOIN UsuarioGrupoUsuario ON GrupoUsuario.Id = UsuarioGrupoUsuario.IdGrupoUsuario
+                WHERE UsuarioGrupoUsuario.IdUsuario = @IdUsuario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdUsuario", _idUsuario);
+                cn.Open();
+
+                using (SqlDataReader ler = cmd.ExecuteReader())
+                {
+                    while (ler.Read())
+                    {
+                        grupousuario = new GrupoUsuario();
+                        grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
+                        grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
+                        grupoUsuarios.Add(grupousuario);
+                    }
+                }
+                return grupoUsuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro na tentativa de buscar os dados dos usuarios. Por favor verifique sua conexão", ex);
             }
             finally
             {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,46 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class FormCadastroGrupoUsuario : Form
     {
-        public FormCadastroGrupoUsuario()
+        int Id;
+        public FormCadastroGrupoUsuario(int _id = 0)
         {
             InitializeComponent();
+            Id = _id;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonCancelarGpUsu_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Deseja cancelar a operação?",
+                "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
 
+        private void buttonSalvarGpUsu_Click(object sender, EventArgs e)
+        {
+            GrupoUsuarioBLL gpusuarioBLL = new GrupoUsuarioBLL();
+            grupoUsuarioBindingSource.EndEdit();
+            if (Id == 0)
+            {
+                gpusuarioBLL.Inserir((GrupoUsuario)grupoUsuarioBindingSource.Current);
+            }
+            else
+            {
+                gpusuarioBLL.Altualizar((GrupoUsuario)grupoUsuarioBindingSource.Current);
+            }
+        }
+
+        private void FormCadastroGrupoUsuario_Load(object sender, EventArgs e)
+        {
+            if (Id == 0)
+            {
+                grupoUsuarioBindingSource.AddNew();
+            }
+            else
+            {
+                grupoUsuarioBindingSource.DataSource = new GrupoUsuarioBLL().BuscarporID(Id);
+            }
         }
     }
 }

@@ -120,6 +120,7 @@ namespace DAL
                         usuario.CPF = (ler["CPF"]).ToString();
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
                         usuarios.Add(usuario);
 
                     }
@@ -162,6 +163,7 @@ namespace DAL
                         usuario.CPF = (ler["CPF"]).ToString();
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
                         usuarios.Add(usuario);
                     }
                 }
@@ -203,6 +205,7 @@ namespace DAL
                         usuario.CPF = (ler["CPF"]).ToString();
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
                         usuarios.Add(usuario);
                     }
                 }
@@ -244,6 +247,7 @@ namespace DAL
                         usuario.CPF = (ler["CPF"]).ToString();
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
                         usuarios.Add(usuario);
                     }
                 }
@@ -286,6 +290,7 @@ namespace DAL
                         usuario.CPF = (ler["CPF"]).ToString();
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
+                        usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
                         usuarios.Add(usuario);
                     }
                 }
@@ -331,6 +336,67 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Você não tem permissao", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void AdicionarGrupoUsuario(int _idusuario, object _idgpUsuario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO UsuarioGrupoUsuario(IdUsuario, IdGrupoUsuario)
+                                  VALUES(@Idusuario,@Ativo)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idgpUsuario);
+                cmd.Parameters.AddWithValue("@IdUsuario", _idusuario);
+                
+                cmd.Connection = cn;
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar vincular um grupo a um usuaroi no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
+        public bool UsuarioPertencerAoGrupo(int _idusuario, int _idgrupousuario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT 1 FROM UsuarioGrupoUsuario " +
+                    "WHERE IdUsuario = @IdUsuario AND IdGrupoUsuario=@IdGrupoUsuario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdUsuario", _idusuario);
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idgrupousuario);
+                cn.Open();
+
+                using (SqlDataReader ler = cmd.ExecuteReader())
+                {
+                    if (ler.Read())
+                    {
+                        return true;
+                    }
+                }
+                return false;
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar existência de grupo vinculado ao usuario no banco.", ex);
             }
             finally
             {

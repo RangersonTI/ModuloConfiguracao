@@ -14,14 +14,14 @@ namespace BLL
         
         public void Inserir(Usuario _usuario)
         {
-            ValidarPermissao(2);
+            //ValidarPermissao(2);
             ValidarDados(_usuario);
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Inserir(_usuario);
         }
         public void Alterar(Usuario _usuario)
         {
-            ValidarPermissao(3);
+            //ValidarPermissao(3);
             ValidarDados(_usuario);
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Atualizar(_usuario);
@@ -29,33 +29,33 @@ namespace BLL
         }
         public void Excluir(int _id)
         {
-            ValidarPermissao(4);
+            //ValidarPermissao(4);
             new UsuarioDAL().Deletar(_id);
         }
 
         public List<Usuario> BuscarPorTodos()
         {
-            ValidarPermissao(1);
+            //ValidarPermissao(1);
             return new UsuarioDAL().BuscarTodos();
         }
         public List<Usuario>BuscarPorNome(string _nome)
         {
-            ValidarPermissao(1);
+            //ValidarPermissao(1);
             return new UsuarioDAL().BuscarporNome(_nome);
         }
         public List<Usuario>BuscarPorID(int _id)
         {
-            ValidarPermissao(1);
+            //ValidarPermissao(1);
             return new UsuarioDAL().BuscarporId(_id);
         }
         public List<Usuario>BuscarPorCPF(string _Cpf)
         {
-            ValidarPermissao(1);
+            //ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorCPF(_Cpf);
         }
         public List<Usuario> BuscarPorNMUsuario(string _nmusuario)
         {
-            ValidarPermissao(1);
+            //ValidarPermissao(1);
             return new UsuarioDAL().BuscarporNomeUsuario(_nmusuario);
         }
 
@@ -71,10 +71,17 @@ namespace BLL
                 throw new Exception("O nome deve ter mais de 3 caracteres");
             }
         }
-        public void ValidarPermissao(int _idPermissao)
+        private void ValidarPermissao(int _idPermissao)
         {
             if (!new UsuarioDAL().ValidarPermissao(Constante.IdUsuarioLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar esta operação. Procure o administrador do sistema");
+        }
+
+        public void AdicionarGrupoUsuario(int _idusuario, int _idGpUsuario)
+        {
+            if(!new UsuarioDAL().UsuarioPertencerAoGrupo(_idusuario, _idGpUsuario))
+                new UsuarioDAL().AdicionarGrupoUsuario(_idusuario, _idGpUsuario);
+       
         }
     }
 }

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -85,6 +86,28 @@ namespace WindowsFormsAppPrincipal
                     frm.ShowDialog();
                 }
                 buttonBuscar_Click(null, null);
+            }
+        }
+
+        private void buttonAdicionarGpUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (ConsultaGrupoUsuario frm = new ConsultaGrupoUsuario())
+                {
+                    frm.ShowDialog();
+
+                    if (frm.Id_grupo != 0)
+                    {
+                        int Idusuario = ((Usuario)usuarioBindingSource.Current).Id;
+                        new UsuarioBLL().AdicionarGrupoUsuario(Idusuario, frm.Id_grupo);
+                    }
+                   
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -40,22 +40,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.18182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(582, 119);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Grupos de usuário";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // grupoUsuarioBindingSource
-            // 
-            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
-            // 
             // nomeGrupoLabel
             // 
             nomeGrupoLabel.AutoSize = true;
@@ -66,6 +50,21 @@
             nomeGrupoLabel.TabIndex = 2;
             nomeGrupoLabel.Text = "Nome do Grupo:";
             nomeGrupoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.18182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(582, 119);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cadastro de Grupos de usuário";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // grupoUsuarioBindingSource
+            // 
+            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
             // 
             // nomeGrupoTextBox
             // 
@@ -86,6 +85,7 @@
             this.buttonSalvarGpUsu.TabIndex = 17;
             this.buttonSalvarGpUsu.Text = "Salvar";
             this.buttonSalvarGpUsu.UseVisualStyleBackColor = false;
+            this.buttonSalvarGpUsu.Click += new System.EventHandler(this.buttonSalvarGpUsu_Click);
             // 
             // buttonCancelarGpUsu
             // 
@@ -97,11 +97,11 @@
             this.buttonCancelarGpUsu.TabIndex = 16;
             this.buttonCancelarGpUsu.Text = "Cancelar";
             this.buttonCancelarGpUsu.UseVisualStyleBackColor = false;
+            this.buttonCancelarGpUsu.Click += new System.EventHandler(this.buttonCancelarGpUsu_Click);
             // 
             // FormCadastroGrupoUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(582, 356);
             this.Controls.Add(this.buttonSalvarGpUsu);
             this.Controls.Add(this.buttonCancelarGpUsu);
@@ -111,9 +111,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormCadastroGrupoUsuario";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Cadastro de Grupo de Usuario";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormCadastroGrupoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

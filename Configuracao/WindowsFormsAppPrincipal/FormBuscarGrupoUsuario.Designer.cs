@@ -226,6 +226,7 @@
             this.MinimizeBox = false;
             this.Name = "FormBuscarGrupoUsuario";
             this.Text = "Grupo de Usuario";
+            this.Load += new System.EventHandler(this.FormBuscarGrupoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource1)).EndInit();
