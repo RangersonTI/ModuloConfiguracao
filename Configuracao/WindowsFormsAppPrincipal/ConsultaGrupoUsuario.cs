@@ -14,7 +14,7 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class ConsultaGrupoUsuario : Form
     {
-        
+        int Id;
         public ConsultaGrupoUsuario()
         {
             InitializeComponent();
@@ -42,8 +42,9 @@ namespace WindowsFormsAppPrincipal
             try
             {
                 if(gPusuariosBindingSource.Count > 0)
-                    int Id = ((GrupoUsuario)gPusuariosBindingSource.Current).Id_grupo;
-                
+                {
+                    Id = ((GrupoUsuario)gPusuariosBindingSource.Current).Id_grupo;
+                }
             }
             catch(Exception ex)
             {

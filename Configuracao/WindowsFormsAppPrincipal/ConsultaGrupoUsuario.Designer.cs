@@ -104,9 +104,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.29091F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(169, 23);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(444, 37);
@@ -145,6 +144,8 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelect);
             this.Controls.Add(this.gPusuariosDataGridView);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConsultaGrupoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaGrupoUsuario";
