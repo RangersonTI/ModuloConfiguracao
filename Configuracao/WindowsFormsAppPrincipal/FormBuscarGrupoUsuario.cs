@@ -22,7 +22,7 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            grupoUsuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorTodos();
+            grupoUsuarioBindingSource.DataSource = new GrupoUsuarioBLL().BuscarTudo();
             try
             {
                 

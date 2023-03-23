@@ -21,7 +21,7 @@ namespace WindowsFormsAppPrincipal
 
         private void FormTelaPrincipal_Load(object sender, EventArgs e)
         {
-            Constante.IdUsuarioLogado = 1;
+            Constante.IdUsuarioLogado = 3;
         }
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)

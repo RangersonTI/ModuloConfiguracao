@@ -97,13 +97,28 @@ namespace WindowsFormsAppPrincipal
                 {
                     frm.ShowDialog();
 
-                    if (frm.Id_grupo != 0)
+                    /*if (frm.Id != 0)
                     {
                         int Idusuario = ((Usuario)usuarioBindingSource.Current).Id;
                         new UsuarioBLL().AdicionarGrupoUsuario(Idusuario, frm.Id_grupo);
-                    }
+                    }*/
                    
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonExcluirGpUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idGpUsuario = ((GrupoUsuario)gruposBindingSource.Current).Id_grupo;
+                int idUsuario = ((Usuario)usuarioBindingSource.Current).Id;
+                new UsuarioBLL().RemoverGrupoUsuario(idGpUsuario,idUsuario);
+                gruposBindingSource.RemoveCurrent();
             }
             catch(Exception ex)
             {

@@ -211,6 +211,7 @@
             this.buttonExcluirGpUsuario.TabIndex = 9;
             this.buttonExcluirGpUsuario.Text = "Excluir";
             this.buttonExcluirGpUsuario.UseVisualStyleBackColor = false;
+            this.buttonExcluirGpUsuario.Click += new System.EventHandler(this.buttonExcluirGpUsuario_Click);
             // 
             // gruposBindingSource
             // 

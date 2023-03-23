@@ -100,9 +100,15 @@ INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario,IdPermissao)VALUES(1,8)
 INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario,IdPermissao)VALUES(1,9)
 INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario,IdPermissao)VALUES(1,10)
 
+INSERT INTO UsuarioGrupoUsuario VALUES(3,1)
+INSERT INTO UsuarioGrupoUsuario VALUES(2,2)
+INSERT INTO UsuarioGrupoUsuario VALUES(1,3)
+INSERT INTO UsuarioGrupoUsuario VALUES(2,5)
+INSERT INTO UsuarioGrupoUsuario VALUES(3,4)
+
 SELECT * FROM GrupoUsuario
-SELECT * FROM Permissao
 SELECT * FROM Usuario
+SELECT * FROM Permissao
 SELECT * FROM PermissaoGrupoUsuario
 SELECT * FROM UsuarioGrupoUsuario
 

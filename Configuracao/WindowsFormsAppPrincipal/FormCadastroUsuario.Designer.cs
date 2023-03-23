@@ -46,7 +46,7 @@
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.senhaTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxConfirmaS = new System.Windows.Forms.TextBox();
             cPFLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(601, 226);
+            label2.Location = new System.Drawing.Point(583, 226);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(148, 24);
             label2.TabIndex = 23;
@@ -209,25 +209,24 @@
             this.senhaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senhaTextBox.Location = new System.Drawing.Point(299, 251);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(290, 28);
+            this.senhaTextBox.Size = new System.Drawing.Size(265, 28);
             this.senhaTextBox.TabIndex = 22;
             // 
-            // textBox1
+            // textBoxConfirmaS
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(605, 251);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 28);
-            this.textBox1.TabIndex = 24;
+            this.textBoxConfirmaS.Location = new System.Drawing.Point(587, 251);
+            this.textBoxConfirmaS.Multiline = true;
+            this.textBoxConfirmaS.Name = "textBoxConfirmaS";
+            this.textBoxConfirmaS.Size = new System.Drawing.Size(265, 28);
+            this.textBoxConfirmaS.TabIndex = 24;
             // 
             // FormCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 456);
+            this.Controls.Add(this.textBoxConfirmaS);
             this.Controls.Add(label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(senhaLabel);
             this.Controls.Add(this.senhaTextBox);
             this.Controls.Add(nomeUsuarioLabel);
@@ -267,6 +266,6 @@
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox nomeUsuarioTextBox;
         private System.Windows.Forms.TextBox senhaTextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxConfirmaS;
     }
 }

@@ -89,21 +89,22 @@ namespace DAL
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             List<GrupoUsuario> gpusuario = new List<GrupoUsuario>();
-            GrupoUsuario grupousuario = new GrupoUsuario();
+            GrupoUsuario grupousuario;
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id,NomeGrupo FROM GrupoUsuario";
+                cmd.CommandText = "SELECT Id, NomeGrupo FROM GrupoUsuario";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    if (ler.Read())
+                    while(ler.Read())
                     {
-                        grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
+                        grupousuario = new GrupoUsuario();
                         grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
+                        grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
                         gpusuario.Add(grupousuario);
 
                     }
@@ -129,14 +130,14 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id,NomeGrupo FROM GrupoUsuario WHERE NomeGrupo LIKE =@nome";
+                cmd.CommandText = "SELECT Id,NomeGrupo FROM GrupoUsuario WHERE NomeGrupo LIKE @nome";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@nome", _nome);
+                cmd.Parameters.AddWithValue("@nome","%"+_nome+"%");
                 cn.Open();
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    while (ler.Read())
+                    while(ler.Read())
                     {
                         grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
@@ -171,7 +172,7 @@ namespace DAL
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    while (ler.Read())
+                    if(ler.Read())
                     {
                         grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();
@@ -207,7 +208,7 @@ namespace DAL
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    while (ler.Read())
+                    while(ler.Read())
                     {
                         grupousuario = new GrupoUsuario();
                         grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);

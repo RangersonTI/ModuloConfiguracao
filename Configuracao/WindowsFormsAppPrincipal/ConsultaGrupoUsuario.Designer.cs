@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaGrupoUsuario));
             this.gPusuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gPusuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -144,6 +145,7 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelect);
             this.Controls.Add(this.gPusuariosDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultaGrupoUsuario";
