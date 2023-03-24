@@ -15,7 +15,6 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class FormBuscarUsuario : Form
     {
-        public int Id;
         public FormBuscarUsuario()
         {
             InitializeComponent();
@@ -66,10 +65,6 @@ namespace WindowsFormsAppPrincipal
 
         }
 
-        private void usuarioBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
@@ -97,11 +92,11 @@ namespace WindowsFormsAppPrincipal
                 {
                     frm.ShowDialog();
 
-                    /*if (frm.Id != 0)
+                    if (frm.Id != 0)
                     {
                         int Idusuario = ((Usuario)usuarioBindingSource.Current).Id;
-                        new UsuarioBLL().AdicionarGrupoUsuario(Idusuario, frm.Id_grupo);
-                    }*/
+                        new UsuarioBLL().AdicionarGrupoUsuario(Idusuario, frm.Id);
+                    }
                    
                 }
             }

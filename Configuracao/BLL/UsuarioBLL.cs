@@ -90,7 +90,7 @@ namespace BLL
 
         public void RemoverGrupoUsuario(int idGpUsuario, int idUsuario)
         {
-            new UsuarioDAL.RemoverGrupo(idGpUsuario, idUsuario);
+            new UsuarioDAL().RemoveGrupoUsuario(idGpUsuario, idUsuario);
         }
     }
 }

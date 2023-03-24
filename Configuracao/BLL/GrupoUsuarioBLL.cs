@@ -13,19 +13,18 @@ namespace BLL
         public void Inserir(GrupoUsuario _gpUsuario)
         {
             GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
-            //ValidarDados(_gpUsuario);
+            ValidarDados(_gpUsuario);
             GPUsuarioDAL.Inserir(_gpUsuario);
         }
-        public void Altualizar(GrupoUsuario _gpUsuario)
+        public void Atualizar(GrupoUsuario _gpUsuario)
         {
             GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
-            //ValidarDados(_gpUsuario);
+            ValidarDados(_gpUsuario);
             GPUsuarioDAL.Atualizar(_gpUsuario);
         }
         public void Excluir(int _id)
         {
             GrupoUsuarioDAL GPUsuarioDAL = new GrupoUsuarioDAL();
-            //ValidarDados(_gpUsuario);
             GPUsuarioDAL.Deletar(_id);
         }
         public List<GrupoUsuario> BuscarTudo()

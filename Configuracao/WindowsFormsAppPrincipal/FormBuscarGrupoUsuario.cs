@@ -14,7 +14,7 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class FormBuscarGrupoUsuario : Form
     {
-        int Id;
+        public int Id;
         public FormBuscarGrupoUsuario()
         {
             InitializeComponent();

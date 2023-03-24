@@ -100,11 +100,14 @@ INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario,IdPermissao)VALUES(1,8)
 INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario,IdPermissao)VALUES(1,9)
 INSERT INTO PermissaoGrupoUsuario(IdGrupoUsuario,IdPermissao)VALUES(1,10)
 
-INSERT INTO UsuarioGrupoUsuario VALUES(3,1)
-INSERT INTO UsuarioGrupoUsuario VALUES(2,2)
+INSERT INTO UsuarioGrupoUsuario VALUES(2,1)
+INSERT INTO UsuarioGrupoUsuario VALUES(1,2)
 INSERT INTO UsuarioGrupoUsuario VALUES(1,3)
 INSERT INTO UsuarioGrupoUsuario VALUES(2,5)
 INSERT INTO UsuarioGrupoUsuario VALUES(3,4)
+
+INSERT INTO Usuario VALUES('Danilo Alves','Grnt. Danilo','daniloalves@gmail.com','031.602.691-87',1,'dan465we3')
+INSERT INTO Usuario VALUES('Luiza Lemos','Luiza Lemos','lulemos567@outlook.com','526.153.481-60',1,'lulem269@Lu')
 
 SELECT * FROM GrupoUsuario
 SELECT * FROM Usuario
