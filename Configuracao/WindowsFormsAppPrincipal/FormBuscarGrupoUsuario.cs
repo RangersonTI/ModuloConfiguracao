@@ -61,5 +61,23 @@ namespace WindowsFormsAppPrincipal
         {
 
         }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            if (grupoUsuarioBindingSource.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma opção para alterar.");
+                return;
+            }
+            else
+            {
+                int id = ((GrupoUsuario)grupoUsuarioBindingSource.Current).Id_grupo;
+                using (FormCadastroGrupoUsuario frm = new FormCadastroGrupoUsuario(id))
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscar_Click(null, null);
+            }
+        }
     }
 }

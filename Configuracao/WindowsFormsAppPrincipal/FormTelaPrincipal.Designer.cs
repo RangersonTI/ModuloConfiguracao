@@ -64,20 +64,24 @@
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.usuárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // permissãoToolStripMenuItem
             // 
             this.permissãoToolStripMenuItem.Name = "permissãoToolStripMenuItem";
-            this.permissãoToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.permissãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.permissãoToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
             this.permissãoToolStripMenuItem.Text = "Permissão";
+            this.permissãoToolStripMenuItem.Click += new System.EventHandler(this.permissãoToolStripMenuItem_Click);
             // 
             // grupoDeUsuárioToolStripMenuItem
             // 
             this.grupoDeUsuárioToolStripMenuItem.Name = "grupoDeUsuárioToolStripMenuItem";
-            this.grupoDeUsuárioToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.grupoDeUsuárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.grupoDeUsuárioToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
             this.grupoDeUsuárioToolStripMenuItem.Text = "Grupo de Usuário";
             this.grupoDeUsuárioToolStripMenuItem.Click += new System.EventHandler(this.grupoDeUsuárioToolStripMenuItem_Click);
             // 

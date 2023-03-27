@@ -90,7 +90,7 @@ namespace DAL
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             List<Permissao> permissoes = new List<Permissao>();
-            Permissao permissao = new Permissao();
+            Permissao permissao;
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -101,13 +101,13 @@ namespace DAL
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    if (ler.Read())
-                    {
+                   while(ler.Read())
+                   {
+                        permissao = new Permissao();
                         permissao.Id_permi = Convert.ToInt32(ler["Id"]);
                         permissao.Descricao = (ler["Descricao"]).ToString();
                         permissoes.Add(permissao);
-
-                    }
+                   }
                 }
                 return permissoes;
             }

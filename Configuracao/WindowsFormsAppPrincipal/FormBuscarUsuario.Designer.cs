@@ -73,7 +73,7 @@
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.RowHeadersWidth = 45;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(890, 434);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(883, 434);
             this.usuarioDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn3
@@ -156,7 +156,7 @@
             // buttonAdicionarGpUsuario
             // 
             this.buttonAdicionarGpUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionarGpUsuario.Location = new System.Drawing.Point(1159, 54);
+            this.buttonAdicionarGpUsuario.Location = new System.Drawing.Point(1179, 55);
             this.buttonAdicionarGpUsuario.Name = "buttonAdicionarGpUsuario";
             this.buttonAdicionarGpUsuario.Size = new System.Drawing.Size(91, 31);
             this.buttonAdicionarGpUsuario.TabIndex = 5;
@@ -204,7 +204,7 @@
             this.buttonExcluirGpUsuario.BackColor = System.Drawing.Color.IndianRed;
             this.buttonExcluirGpUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonExcluirGpUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirGpUsuario.Location = new System.Drawing.Point(1062, 54);
+            this.buttonExcluirGpUsuario.Location = new System.Drawing.Point(1082, 55);
             this.buttonExcluirGpUsuario.Name = "buttonExcluirGpUsuario";
             this.buttonExcluirGpUsuario.Size = new System.Drawing.Size(91, 31);
             this.buttonExcluirGpUsuario.TabIndex = 9;
@@ -228,11 +228,11 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.gPusuariosDataGridView.DataSource = this.gruposBindingSource;
-            this.gPusuariosDataGridView.Location = new System.Drawing.Point(908, 110);
+            this.gPusuariosDataGridView.Location = new System.Drawing.Point(901, 110);
             this.gPusuariosDataGridView.Name = "gPusuariosDataGridView";
             this.gPusuariosDataGridView.ReadOnly = true;
             this.gPusuariosDataGridView.RowHeadersWidth = 47;
-            this.gPusuariosDataGridView.Size = new System.Drawing.Size(446, 434);
+            this.gPusuariosDataGridView.Size = new System.Drawing.Size(369, 434);
             this.gPusuariosDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 564);
+            this.ClientSize = new System.Drawing.Size(1282, 564);
             this.Controls.Add(this.gPusuariosDataGridView);
             this.Controls.Add(this.buttonExcluirGpUsuario);
             this.Controls.Add(this.buttonAlterar);

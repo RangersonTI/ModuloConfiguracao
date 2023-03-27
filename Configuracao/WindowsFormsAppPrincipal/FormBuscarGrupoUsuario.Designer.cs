@@ -117,6 +117,7 @@
             this.buttonAlterar.TabIndex = 15;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonExcluirGpUsuario
             // 

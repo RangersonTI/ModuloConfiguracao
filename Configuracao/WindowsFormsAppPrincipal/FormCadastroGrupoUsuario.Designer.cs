@@ -34,8 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSalvarGpUsu = new System.Windows.Forms.Button();
             this.buttonCancelarGpUsu = new System.Windows.Forms.Button();
-            this.grupoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeGrupoTextBox = new System.Windows.Forms.TextBox();
+            this.grupoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeGrupoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.18182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(590, 119);
+            this.label1.Size = new System.Drawing.Size(590, 116);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Grupos de usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,7 +66,7 @@
             // 
             this.buttonSalvarGpUsu.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonSalvarGpUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvarGpUsu.Location = new System.Drawing.Point(474, 306);
+            this.buttonSalvarGpUsu.Location = new System.Drawing.Point(482, 314);
             this.buttonSalvarGpUsu.Name = "buttonSalvarGpUsu";
             this.buttonSalvarGpUsu.Size = new System.Drawing.Size(96, 38);
             this.buttonSalvarGpUsu.TabIndex = 17;
@@ -78,17 +78,13 @@
             // 
             this.buttonCancelarGpUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelarGpUsu.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelarGpUsu.Location = new System.Drawing.Point(372, 306);
+            this.buttonCancelarGpUsu.Location = new System.Drawing.Point(380, 314);
             this.buttonCancelarGpUsu.Name = "buttonCancelarGpUsu";
             this.buttonCancelarGpUsu.Size = new System.Drawing.Size(96, 38);
             this.buttonCancelarGpUsu.TabIndex = 16;
             this.buttonCancelarGpUsu.Text = "Cancelar";
             this.buttonCancelarGpUsu.UseVisualStyleBackColor = false;
             this.buttonCancelarGpUsu.Click += new System.EventHandler(this.buttonCancelarGpUsu_Click);
-            // 
-            // grupoUsuarioBindingSource
-            // 
-            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
             // 
             // nomeGrupoTextBox
             // 
@@ -98,6 +94,10 @@
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
             this.nomeGrupoTextBox.Size = new System.Drawing.Size(260, 28);
             this.nomeGrupoTextBox.TabIndex = 19;
+            // 
+            // grupoUsuarioBindingSource
+            // 
+            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
             // 
             // FormCadastroGrupoUsuario
             // 

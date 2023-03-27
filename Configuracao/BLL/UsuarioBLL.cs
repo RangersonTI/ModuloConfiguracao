@@ -92,5 +92,14 @@ namespace BLL
         {
             new UsuarioDAL().RemoveGrupoUsuario(idGpUsuario, idUsuario);
         }
+
+        public void Altenticar(string textNome, string textSenha)
+        {
+            Usuario usuario = new UsuarioDAL().BuscarporNome(textNome);
+            if(textSenha==usuario.Senha && usuario.Ativo)
+            {
+
+            }
+        }
     }
 }

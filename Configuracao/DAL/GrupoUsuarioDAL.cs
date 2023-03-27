@@ -137,7 +137,7 @@ namespace DAL
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    while(ler.Read())
+                    if(ler.Read())
                     {
                         grupousuario.Id_grupo = Convert.ToInt32(ler["Id"]);
                         grupousuario.NomeGrupo = (ler["NomeGrupo"]).ToString();

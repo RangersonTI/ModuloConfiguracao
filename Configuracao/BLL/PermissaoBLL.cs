@@ -10,19 +10,21 @@ namespace BLL
 {
     public class PermissaoBLL
     {   
-        PermissaoDAL permissaoDAL = new PermissaoDAL();
         public void Inserir(Permissao _permissao)
         {
             ValidarDados(_permissao);
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
             permissaoDAL.Inserir(_permissao);
         }
         public void Altualizar(Permissao _permissao)
         {
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
             ValidarDados(_permissao);
             permissaoDAL.Atualizar(_permissao);
         }
         public void Excluir(int _id)
         {
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
             permissaoDAL.Deletar(_id);
         }
         public List<Permissao> BuscarTudo()
