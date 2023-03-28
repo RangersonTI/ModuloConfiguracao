@@ -121,9 +121,9 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(668, 357);
+            this.button2.Location = new System.Drawing.Point(654, 357);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 35);
+            this.button2.Size = new System.Drawing.Size(119, 35);
             this.button2.TabIndex = 5;
             this.button2.Text = "Selecionar";
             this.button2.UseVisualStyleBackColor = false;
