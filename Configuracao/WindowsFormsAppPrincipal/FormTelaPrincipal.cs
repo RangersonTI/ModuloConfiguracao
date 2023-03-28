@@ -38,7 +38,7 @@ namespace WindowsFormsAppPrincipal
             }
         }
 
-        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormBuscarUsuario frm = new FormBuscarUsuario())
             {
@@ -46,7 +46,7 @@ namespace WindowsFormsAppPrincipal
             }
         }
 
-        private void grupoDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void grupoDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormBuscarGrupoUsuario frm = new FormBuscarGrupoUsuario())
             {
@@ -54,12 +54,13 @@ namespace WindowsFormsAppPrincipal
             }
         }
 
-        private void permissãoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void permissaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FormBuscarPermissao frm = new FormBuscarPermissao())
+            using (FormConsultaPermissao frm = new FormConsultaPermissao())
             {
                 frm.ShowDialog();
             }
         }
+
     }
 }

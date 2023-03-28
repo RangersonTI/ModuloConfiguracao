@@ -20,36 +20,41 @@ namespace WindowsFormsAppPrincipal
             InitializeComponent();
         }
 
-        private void buttonBuscargrupo_Click(object sender, EventArgs e)
+        private void buttonBuscargrupo_Click_1(object sender, EventArgs e)
         {
             try
             {
                 gPusuariosBindingSource.DataSource = new GrupoUsuarioBLL().BuscarporNomeGrupo(textBoxnomegrupo.Text);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
+        private void ConsultaGrupoUsuario_Load(object sender, EventArgs e)
         {
-            Close();
+
         }
 
-        private void buttonSelect_Click(object sender, EventArgs e)
+        private void buttonSelect_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if(gPusuariosBindingSource.Count > 0)
+                if (gPusuariosBindingSource.Count > 0)
                 {
                     Id = ((GrupoUsuario)gPusuariosBindingSource.Current).Id_grupo;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonCancelar_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

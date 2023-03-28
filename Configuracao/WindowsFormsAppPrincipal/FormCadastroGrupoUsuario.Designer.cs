@@ -47,19 +47,19 @@
             nomeGrupoLabel.Location = new System.Drawing.Point(48, 176);
             nomeGrupoLabel.Name = "nomeGrupoLabel";
             nomeGrupoLabel.Size = new System.Drawing.Size(169, 25);
-            nomeGrupoLabel.TabIndex = 2;
+            nomeGrupoLabel.TabIndex = 1;
             nomeGrupoLabel.Text = "Nome do Grupo:";
             nomeGrupoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.18182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 24.21818F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(590, 116);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Grupos de usuário";
+            this.label1.Text = "Cadastro de Grupos de Usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvarGpUsu
@@ -69,7 +69,7 @@
             this.buttonSalvarGpUsu.Location = new System.Drawing.Point(482, 314);
             this.buttonSalvarGpUsu.Name = "buttonSalvarGpUsu";
             this.buttonSalvarGpUsu.Size = new System.Drawing.Size(96, 38);
-            this.buttonSalvarGpUsu.TabIndex = 17;
+            this.buttonSalvarGpUsu.TabIndex = 3;
             this.buttonSalvarGpUsu.Text = "Salvar";
             this.buttonSalvarGpUsu.UseVisualStyleBackColor = false;
             this.buttonSalvarGpUsu.Click += new System.EventHandler(this.buttonSalvarGpUsu_Click);
@@ -81,7 +81,7 @@
             this.buttonCancelarGpUsu.Location = new System.Drawing.Point(380, 314);
             this.buttonCancelarGpUsu.Name = "buttonCancelarGpUsu";
             this.buttonCancelarGpUsu.Size = new System.Drawing.Size(96, 38);
-            this.buttonCancelarGpUsu.TabIndex = 16;
+            this.buttonCancelarGpUsu.TabIndex = 4;
             this.buttonCancelarGpUsu.Text = "Cancelar";
             this.buttonCancelarGpUsu.UseVisualStyleBackColor = false;
             this.buttonCancelarGpUsu.Click += new System.EventHandler(this.buttonCancelarGpUsu_Click);
@@ -93,7 +93,7 @@
             this.nomeGrupoTextBox.Multiline = true;
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
             this.nomeGrupoTextBox.Size = new System.Drawing.Size(260, 28);
-            this.nomeGrupoTextBox.TabIndex = 19;
+            this.nomeGrupoTextBox.TabIndex = 2;
             // 
             // grupoUsuarioBindingSource
             // 

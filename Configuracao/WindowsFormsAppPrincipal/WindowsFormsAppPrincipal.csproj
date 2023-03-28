@@ -52,11 +52,11 @@
     <Compile Include="ConsultaGrupoUsuario.Designer.cs">
       <DependentUpon>ConsultaGrupoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscarPermissao.cs">
+    <Compile Include="FormConsultaPermissao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuscarPermissao.Designer.cs">
-      <DependentUpon>FormBuscarPermissao.cs</DependentUpon>
+    <Compile Include="FormConsultaPermissao.Designer.cs">
+      <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscarGrupoUsuario.cs">
       <SubType>Form</SubType>
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="FormBuscarGrupoUsuario.resx">
       <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscarPermissao.resx">
-      <DependentUpon>FormBuscarPermissao.cs</DependentUpon>
+    <EmbeddedResource Include="FormConsultaPermissao.resx">
+      <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
@@ -128,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Models.GrupoUsuario.datasource" />
     <None Include="Properties\DataSources\Models.Permissao.datasource" />
@@ -154,6 +155,9 @@
       <Project>{4b10ba49-bb46-46a7-a113-7fc4dea3eb34}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\js.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

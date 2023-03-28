@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.permissãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grupoDeUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.permissaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grupoDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +51,9 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuárioToolStripMenuItem,
-            this.permissãoToolStripMenuItem,
-            this.grupoDeUsuárioToolStripMenuItem});
+            this.usuarioToolStripMenuItem,
+            this.permissaoToolStripMenuItem,
+            this.grupoDeUsuarioToolStripMenuItem});
             this.cadastroToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastroToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cadastroToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -61,29 +61,29 @@
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
-            // usuárioToolStripMenuItem
+            // usuarioToolStripMenuItem
             // 
-            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
-            this.usuárioToolStripMenuItem.Text = "Usuário";
-            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
+            this.usuarioToolStripMenuItem.Text = "Usuário";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
-            // permissãoToolStripMenuItem
+            // permissaoToolStripMenuItem
             // 
-            this.permissãoToolStripMenuItem.Name = "permissãoToolStripMenuItem";
-            this.permissãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.permissãoToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
-            this.permissãoToolStripMenuItem.Text = "Permissão";
-            this.permissãoToolStripMenuItem.Click += new System.EventHandler(this.permissãoToolStripMenuItem_Click);
+            this.permissaoToolStripMenuItem.Name = "permissaoToolStripMenuItem";
+            this.permissaoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.permissaoToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
+            this.permissaoToolStripMenuItem.Text = "Permissão";
+            this.permissaoToolStripMenuItem.Click += new System.EventHandler(this.permissaoToolStripMenuItem_Click);
             // 
-            // grupoDeUsuárioToolStripMenuItem
+            // grupoDeUsuarioToolStripMenuItem
             // 
-            this.grupoDeUsuárioToolStripMenuItem.Name = "grupoDeUsuárioToolStripMenuItem";
-            this.grupoDeUsuárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.grupoDeUsuárioToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
-            this.grupoDeUsuárioToolStripMenuItem.Text = "Grupo de Usuário";
-            this.grupoDeUsuárioToolStripMenuItem.Click += new System.EventHandler(this.grupoDeUsuárioToolStripMenuItem_Click);
+            this.grupoDeUsuarioToolStripMenuItem.Name = "grupoDeUsuarioToolStripMenuItem";
+            this.grupoDeUsuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.grupoDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(284, 28);
+            this.grupoDeUsuarioToolStripMenuItem.Text = "Grupo de Usuário";
+            this.grupoDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.grupoDeUsuarioToolStripMenuItem_Click);
             // 
             // FormTelaPrincipal
             // 
@@ -107,9 +107,9 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem permissãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem grupoDeUsuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem permissaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grupoDeUsuarioToolStripMenuItem;
     }
 }
 

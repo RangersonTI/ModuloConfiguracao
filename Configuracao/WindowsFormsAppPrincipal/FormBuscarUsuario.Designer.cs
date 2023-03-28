@@ -74,7 +74,7 @@
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.RowHeadersWidth = 45;
             this.usuarioDataGridView.Size = new System.Drawing.Size(883, 434);
-            this.usuarioDataGridView.TabIndex = 2;
+            this.usuarioDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -140,7 +140,7 @@
             this.buttonBuscar.Location = new System.Drawing.Point(429, 55);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(91, 31);
-            this.buttonBuscar.TabIndex = 3;
+            this.buttonBuscar.TabIndex = 1;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
@@ -151,7 +151,7 @@
             this.textBoxAddModificar.Multiline = true;
             this.textBoxAddModificar.Name = "textBoxAddModificar";
             this.textBoxAddModificar.Size = new System.Drawing.Size(411, 30);
-            this.textBoxAddModificar.TabIndex = 4;
+            this.textBoxAddModificar.TabIndex = 0;
             // 
             // buttonAdicionarGpUsuario
             // 
@@ -159,7 +159,7 @@
             this.buttonAdicionarGpUsuario.Location = new System.Drawing.Point(1179, 55);
             this.buttonAdicionarGpUsuario.Name = "buttonAdicionarGpUsuario";
             this.buttonAdicionarGpUsuario.Size = new System.Drawing.Size(91, 31);
-            this.buttonAdicionarGpUsuario.TabIndex = 5;
+            this.buttonAdicionarGpUsuario.TabIndex = 7;
             this.buttonAdicionarGpUsuario.Text = "Adicionar";
             this.buttonAdicionarGpUsuario.UseVisualStyleBackColor = true;
             this.buttonAdicionarGpUsuario.Click += new System.EventHandler(this.buttonAdicionarGpUsuario_Click);
@@ -170,7 +170,7 @@
             this.buttonAdicionarUsuario.Location = new System.Drawing.Point(720, 54);
             this.buttonAdicionarUsuario.Name = "buttonAdicionarUsuario";
             this.buttonAdicionarUsuario.Size = new System.Drawing.Size(91, 31);
-            this.buttonAdicionarUsuario.TabIndex = 6;
+            this.buttonAdicionarUsuario.TabIndex = 4;
             this.buttonAdicionarUsuario.Text = "Adicionar";
             this.buttonAdicionarUsuario.UseVisualStyleBackColor = true;
             this.buttonAdicionarUsuario.Click += new System.EventHandler(this.buttonAdicionarUsuario_Click);
@@ -183,7 +183,7 @@
             this.buttonExcluirUsuario.Location = new System.Drawing.Point(623, 55);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
             this.buttonExcluirUsuario.Size = new System.Drawing.Size(91, 31);
-            this.buttonExcluirUsuario.TabIndex = 7;
+            this.buttonExcluirUsuario.TabIndex = 3;
             this.buttonExcluirUsuario.Text = "Excluir";
             this.buttonExcluirUsuario.UseVisualStyleBackColor = false;
             this.buttonExcluirUsuario.Click += new System.EventHandler(this.buttonExcluirUsuario_Click);
@@ -194,7 +194,7 @@
             this.buttonAlterar.Location = new System.Drawing.Point(526, 54);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(91, 31);
-            this.buttonAlterar.TabIndex = 8;
+            this.buttonAlterar.TabIndex = 2;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
             this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
@@ -207,7 +207,7 @@
             this.buttonExcluirGpUsuario.Location = new System.Drawing.Point(1082, 55);
             this.buttonExcluirGpUsuario.Name = "buttonExcluirGpUsuario";
             this.buttonExcluirGpUsuario.Size = new System.Drawing.Size(91, 31);
-            this.buttonExcluirGpUsuario.TabIndex = 9;
+            this.buttonExcluirGpUsuario.TabIndex = 6;
             this.buttonExcluirGpUsuario.Text = "Excluir";
             this.buttonExcluirGpUsuario.UseVisualStyleBackColor = false;
             this.buttonExcluirGpUsuario.Click += new System.EventHandler(this.buttonExcluirGpUsuario_Click);
@@ -233,7 +233,7 @@
             this.gPusuariosDataGridView.ReadOnly = true;
             this.gPusuariosDataGridView.RowHeadersWidth = 47;
             this.gPusuariosDataGridView.Size = new System.Drawing.Size(369, 434);
-            this.gPusuariosDataGridView.TabIndex = 9;
+            this.gPusuariosDataGridView.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
             // 

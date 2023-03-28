@@ -63,7 +63,7 @@
             cPFLabel.Location = new System.Drawing.Point(601, 139);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(52, 24);
-            cPFLabel.TabIndex = 17;
+            cPFLabel.TabIndex = 5;
             cPFLabel.Text = "CPF:";
             // 
             // emailLabel
@@ -73,7 +73,7 @@
             emailLabel.Location = new System.Drawing.Point(295, 139);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(62, 24);
-            emailLabel.TabIndex = 18;
+            emailLabel.TabIndex = 3;
             emailLabel.Text = "Email:";
             // 
             // nomeLabel
@@ -83,7 +83,7 @@
             nomeLabel.Location = new System.Drawing.Point(11, 139);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(67, 24);
-            nomeLabel.TabIndex = 19;
+            nomeLabel.TabIndex = 1;
             nomeLabel.Text = "Nome:";
             // 
             // nomeUsuarioLabel
@@ -93,7 +93,7 @@
             nomeUsuarioLabel.Location = new System.Drawing.Point(12, 226);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
             nomeUsuarioLabel.Size = new System.Drawing.Size(136, 24);
-            nomeUsuarioLabel.TabIndex = 20;
+            nomeUsuarioLabel.TabIndex = 8;
             nomeUsuarioLabel.Text = "Nome Usuario:";
             // 
             // senhaLabel
@@ -103,7 +103,7 @@
             senhaLabel.Location = new System.Drawing.Point(295, 226);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(70, 24);
-            senhaLabel.TabIndex = 21;
+            senhaLabel.TabIndex = 10;
             senhaLabel.Text = "Senha:";
             // 
             // label2
@@ -113,7 +113,7 @@
             label2.Location = new System.Drawing.Point(583, 226);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(148, 24);
-            label2.TabIndex = 23;
+            label2.TabIndex = 12;
             label2.Text = "Confirmar senha";
             // 
             // label1
@@ -135,7 +135,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(672, 406);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(96, 38);
-            this.buttonCancelar.TabIndex = 14;
+            this.buttonCancelar.TabIndex = 15;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -147,7 +147,7 @@
             this.buttonSalvar.Location = new System.Drawing.Point(774, 406);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(96, 38);
-            this.buttonSalvar.TabIndex = 15;
+            this.buttonSalvar.TabIndex = 14;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -159,7 +159,7 @@
             this.ativoCheckBox.Location = new System.Drawing.Point(802, 164);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(104, 28);
-            this.ativoCheckBox.TabIndex = 17;
+            this.ativoCheckBox.TabIndex = 7;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +174,7 @@
             this.cPFTextBox.Location = new System.Drawing.Point(605, 164);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(181, 28);
-            this.cPFTextBox.TabIndex = 18;
+            this.cPFTextBox.TabIndex = 6;
             // 
             // emailTextBox
             // 
@@ -183,7 +183,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(299, 164);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(300, 28);
-            this.emailTextBox.TabIndex = 19;
+            this.emailTextBox.TabIndex = 4;
             // 
             // nomeTextBox
             // 
@@ -192,7 +192,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(16, 164);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(277, 28);
-            this.nomeTextBox.TabIndex = 20;
+            this.nomeTextBox.TabIndex = 2;
             // 
             // nomeUsuarioTextBox
             // 
@@ -201,7 +201,7 @@
             this.nomeUsuarioTextBox.Location = new System.Drawing.Point(16, 251);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
             this.nomeUsuarioTextBox.Size = new System.Drawing.Size(277, 28);
-            this.nomeUsuarioTextBox.TabIndex = 21;
+            this.nomeUsuarioTextBox.TabIndex = 9;
             // 
             // senhaTextBox
             // 
@@ -210,7 +210,7 @@
             this.senhaTextBox.Location = new System.Drawing.Point(299, 251);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(265, 28);
-            this.senhaTextBox.TabIndex = 22;
+            this.senhaTextBox.TabIndex = 11;
             // 
             // textBoxConfirmaS
             // 
@@ -218,7 +218,7 @@
             this.textBoxConfirmaS.Multiline = true;
             this.textBoxConfirmaS.Name = "textBoxConfirmaS";
             this.textBoxConfirmaS.Size = new System.Drawing.Size(265, 28);
-            this.textBoxConfirmaS.TabIndex = 24;
+            this.textBoxConfirmaS.TabIndex = 13;
             // 
             // FormCadastroUsuario
             // 

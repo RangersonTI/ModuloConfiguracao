@@ -98,9 +98,10 @@ namespace DAL
 
         public List<Usuario> BuscarTodos()
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             List<Usuario> usuarios = new List<Usuario>();
-            Usuario usuario = new Usuario();
+            Usuario usuario;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -137,10 +138,9 @@ namespace DAL
             }
         }
 
-        public List<Usuario> BuscarporNome(string _nome)
+        public Usuario BuscarporNome(string _nome)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Usuario> usuarios = new List<Usuario>();
             Usuario usuario = new Usuario();
             try
             {
@@ -153,9 +153,8 @@ namespace DAL
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    while (ler.Read())
+                    if (ler.Read())
                     {
-                        usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
                         usuario.Nome = (ler["Nome"]).ToString();
                         usuario.NomeUsuario = (ler["NomeUsuario"]).ToString();
@@ -164,10 +163,9 @@ namespace DAL
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
                         usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
-                        usuarios.Add(usuario);
-                    }
+                         }
                 }
-                return usuarios;
+                return usuario;
             }
             catch (Exception ex)
             {
@@ -178,10 +176,9 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Usuario> BuscarPorCPF(string _cpf)
+        public Usuario BuscarPorCPF(string _cpf)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Usuario> usuarios = new List<Usuario>();
             Usuario usuario = new Usuario();
             try
             {
@@ -206,10 +203,9 @@ namespace DAL
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
                         usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
-                        usuarios.Add(usuario);
                     }
                 }
-                return usuarios;
+                return usuario;
             }
             catch (Exception ex)
             {
@@ -220,24 +216,23 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Usuario> BuscarporNomeUsuario(string _nomeusuario)
+        public Usuario BuscarporNomeUsuario(string _nomeusuario)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Usuario> usuarios = new List<Usuario>();
-            Usuario usuario = new Usuario();
+             Usuario usuario = new Usuario();
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id,Nome,Nome_de_usuario,Email,CPF,Senha
-                                   Ativo FROM Usuario WHERE Nome LIKE=@nmUsuario";
+                cmd.CommandText = @"SELECT Id,Nome,NomeUsuario,Email,CPF,Senha,
+                                   Ativo FROM Usuario WHERE NomeUsuario LIKE @nmUsuario";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@nmUsuario", _nomeusuario);
                 cn.Open();
 
                 using (SqlDataReader ler = cmd.ExecuteReader())
                 {
-                    while (ler.Read())
+                    if (ler.Read())
                     {
                         usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(ler["Id"]);
@@ -248,10 +243,9 @@ namespace DAL
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
                         usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
-                        usuarios.Add(usuario);
                     }
                 }
-                return usuarios;
+                return usuario;
             }
             catch (Exception ex)
             {
@@ -263,10 +257,9 @@ namespace DAL
             }
         }
 
-        public List<Usuario> BuscarporId(int _id)
+        public Usuario BuscarporId(int _id)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Usuario> usuarios = new List<Usuario>();
             Usuario usuario = new Usuario();
             try
             {
@@ -291,10 +284,9 @@ namespace DAL
                         usuario.Senha = (ler["Senha"]).ToString();
                         usuario.Ativo = Convert.ToBoolean(ler["Ativo"]);
                         usuario.GPusuarios = new GrupoUsuarioDAL().BuscarporIdUsuario(usuario.Id);
-                        usuarios.Add(usuario);
                     }
                 }
-                return usuarios;
+                return usuario;
             }
             catch (Exception ex)
             {
